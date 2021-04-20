@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+        <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Bebas+Neue|Raleway:200,300,400&display=swap" rel="stylesheet">
+        <!--<link href="assets/css/groundup.css" rel="stylesheet" type="text/css">-->
+<title> From the Ground Up </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+    body{
+        background-color: rgb(255, 255, 255);
+        color: white;
+        font-family: raleway;
+        padding: 0px;  
+        margin: 0px;                            
+    }
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-areas: 
+        'topnav1 topnav2'
+        'headerimg headerimg'
+        'learn vr'
+        'learn text1'
+        'cafe bar'
+        'slides slides'
+        'footer1 footer1'
+        ; 
+    }
+
+    .slide-container{
+        border-top: 1px solid black;
+        padding-top: 30px;
+        display: grid;
+        grid-template-columns: 20% 10% 20% 20% 30%;
+        grid-template-areas: 
+        'slide1 slide2 slide4 slide5 slide6';
+    }
+
+    .slide1{
+        background-image: url("game.png");
+        background-size: cover;
+        grid-area: slide1;
+        padding: 10px;
+        color: black;
+        font-size: 1.5em;
+        padding-left: 40px;
+        padding-top: 0px;
+        text-align: right;
+    }
+    .slide2{
+        grid-area: slide2;
+        padding: 10px;
+        padding-left: 0px;
+    }
+    
+    .slide3{
+        grid-area: slide3;
+        padding: 10px;
+    }
+    .slide4{
+        grid-area: slide4;
+        padding: 10px;
+    }
+    .slide5{
+        grid-area: slide5;
+        padding: 10px;
+    }
+    .slide6{
+        grid-area: slide6;
+        padding: 10px;
+        padding-right: 40px;
+    }
+
+    .text1{
+        grid-area: text1;
+        background-color: white;
+        padding: 30px;
+        margin: 20px;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    .vr{
+        grid-area: vr;
+        background-color: white;
+        background-image: url("vr.png");
+        background-size: cover;
+        margin: 0px;
+        margin-left: 20px;
+        border-bottom: rgb(255, 172, 125) 3px solid;
+    }
+
+    .footer1{
+        grid-area: footer1;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        font-size: 1.2em;
+        line-height: 1.3;
+        padding: 40px;
+        text-align: left;
+        border-top: grey solid 1px;
+    }
+
+    .topnav1{
+        grid-area: topnav1;
+        background-color: rgb(255, 255, 255);
+        height: 80px;
+        text-align: left;
+        font-family: bebas neue;
+        color: rgb(0, 0, 0);
+        margin: 0px;
+        padding:10px;
+        font-size: 1.1em;
+        padding-top: 0;
+        
+    }
+
+    .topnav2{
+        grid-area: topnav2;
+        background-color: rgb(255, 255, 255);
+        height: 80px;
+        text-align: right;
+        font-family: bebas neue;
+        color: rgb(0, 0, 0);
+        margin: 0px;
+        padding:10px;
+        padding-top: 0;
+    }
+
+    .learn{
+        grid-area: learn;
+        background-image: url("learn.png");
+        box-shadow: 3px 3px 10px rgb(179, 179, 179);
+        background-size: cover;
+        color: white;
+        padding: 10px;
+        margin: 20px;
+        margin-left: 30px;
+        border-radius: 20px;
+    }
+
+    .slides{
+        grid-area: slides;
+        background-color: rgb(255, 255, 255);
+        color: white;
+        padding: 10px;
+
+    }
+
+    #slides1{
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .cafe{
+        grid-area: cafe;
+        background-image: url("cafe.png");
+        box-shadow: 3px 3px 10px rgb(179, 179, 179);
+        background-size: cover;
+        color: white;
+        padding: 30px;
+        padding-right: 570px;
+        margin: 40px;
+        margin-right: 20px;
+        margin-left: 40px;
+        border-radius: 20px;
+        font-size: 1.4em;
+        line-height: 1.3;
+        
+
+    }
+    .bar{
+        grid-area: bar;
+        background-color: black;
+        background-image: url("bar1.png");
+        box-shadow: 3px 3px 10px rgb(179, 179, 179);
+        background-size: cover;
+        color: white;
+        padding: 10px;
+        padding-left: 30px;
+        padding-right: 320px;
+        margin: 40px;
+        margin-left: 10px;
+        border-radius: 20px;
+        font-size: 1.3em;
+        line-height: 1.3;
+    }
+
+
+    .headerimg{
+        grid-area: headerimg;
+        padding-bottom: 30px;
+        background-image: url("head2.png");
+        background-size: cover;
+        color: white;
+        margin: 30px;
+        border-radius: 20px;
+        box-shadow: 3px 3px 10px rgb(179, 179, 179);
+        
+ 
+    }
+    img{
+        object-fit: contain;
+        border: none;
+        outline: none;
+        margin: 0;
+        width: 100%;
+    }
+
+    .header-container{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 'header1 header2';
+    }
+
+    .header1{
+        grid-area: header1;
+        padding: 10px;
+       
+    }
+    .header2{
+        grid-area: header2;
+        padding: 10px;
+    }
+
+    h3{
+        color: black;
+        font-family: raleway;
+        line-height: 1.3;
+        font-size: 1.25em;
+        font-weight: 400;
+        margin-top: 200px;
+        margin-left: 90px;
+        padding-right: 95px;
+
+    }
+
+    #title{
+        font-size: 1.5em;;
+        font-weight: 600;
+    }
+
+    #title2{
+        font-size: 1.3em;;
+        font-weight: 600;
+        
+    }
+    h4{
+        color: black;
+        font-family: raleway;
+        line-height: 1.4;
+        font-size: 1.3em;
+        font-weight: 400;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    h5{
+        color: black;
+        font-family: raleway;
+        line-height: 1.4;
+        font-size: 1.3em;
+        font-weight: 400;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    h6{
+        font-family: Raleway;
+        margin: 0px;
+        font-size: 1.7em;
+        font-weight: 600;
+        padding-top: 5px;
+        padding-bottom: 0px;
+        padding-right: 20px;
+
+    }
+
+    #logo{
+        width: 33%;
+        padding-left: 20px;
+    }
+
+    h2{
+        font-family: Raleway;
+        margin: 0px;
+        font-size: 1.7em;
+        font-weight: 600;
+        padding-top: 60px;
+        padding-bottom: 0px;
+        padding-right: 20px;
+    }
+    .topnav2 h2{
+        font-family: Raleway;
+        margin: 0px;
+        font-size: 1.4em;
+        font-weight: 600;
+        padding-top: 50px;
+        padding-bottom: 0px;
+        padding-right: 20px;
+    }
+
+    .topnav2 h3{
+        font-family: Raleway;
+        margin: 0px;
+        font-size: 1em;
+        font-weight: 600;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        padding-right: 30px;
+        font-weight: 500;
+        color: green;
+    }
+
+    #high2{
+        text-decoration: underline solid rgb(188, 255, 143);
+        font-weight: 600;
+        color: rgb(28, 133, 28);
+    }
+
+</style>
+
+</head>
+<body>
+<div class="grid-container">
+    <div class="topnav1">
+       <img id="logo" src="logo3.png">
+    </div>
+
+    <div class="topnav2">
+        <h2>
+        home &nbsp;&nbsp;&nbsp;
+        learn &nbsp;&nbsp;&nbsp;
+        cafe/bar &nbsp;&nbsp;&nbsp;
+        product &nbsp;<br>
+        </h2>
+        <h3>Check out our VR Demo from Women in Computing Hackathon <span id="high2">here</span> </h3>
+    </div>
+
+    <div class="headerimg">
+        <div class="header-container">
+            <div class="header1">
+
+
+            </div>
+            <div class="header2">
+                <h3>
+                    <span id="title2">Virtual Reality for Learning & Awareness. </span>
+
+                    <p>This product teaches the user a job skill, as well as the value of better product choices. It focuses on the 
+                    quality of products and how they can be used in the real world, 
+                    using both Organic and Biodynamic products by using the following VR components: 
+                    <br>
+                    <br> Oculus Rift VR: to project user into VR environment
+                    <br> Motion Leap (motion capture device): to track user's hands in real time.
+                    </p>
+                    </h3>
+            </div>
+        </div>
+    </div>
+    <div class="vr">
+        <p>&nbsp;</p><p>&nbsp;</p>
+        <p>&nbsp;</p><p>&nbsp;</p>
+        <p>&nbsp;</p><p>&nbsp;</p>
+        <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+    </div>
+
+  
+
+    <div class="learn">
+<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+
+
+    </div>
+    <div class="text1">
+        
+        
+        <h4>
+           <span id="title"> Get your VR on!</span>
+            <br> The Wegmans’ API incorporated into our VR Cafe
+            uses Biodynamic Coffee from the company's Biodynamic Farm in Brazil, the first of its kind!
+            <br>
+            <br> Biodynamic Farming is a Good Agricultural Practice where farms are treated as a living organism itself: 
+            a self-sustaining ecosystem with minimal human intervention.
+        </h4>
+    </div>
+
+    <div class="cafe">
+        <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+        
+        <span id="title">VR Barista</span>
+        <br>Step into the role of barista as you serve up a variety of caffeinated beverages with products from Wegmans. 
+        Learn all the skills you may need without spilling the tea!
+
+        <br>
+
+    </div>
+
+    <div class="bar">
+        <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+        
+        <br><span id="title">VR BARista</span>
+        <br>Learn how to make mixed drinks with YOUR favorite brands and ingredients, courtesy of Constellation Brand and Wegmans!
+        Be the star of the next girls night in.
+
+    </div>
+
+    <div class="slides">
+        <div class="slide-container">
+            <div class="slide1">
+                <h6>In-Game Illustrations!</h6>
+                <br>
+            </div>
+            <div class="slide2">
+                <img id="slides1" src="1.png">
+                <img id="slides1" src="5.png">
+            </div>
+            <div class="slide4">
+                <img id="slides1" src="scrn.jpg">
+            </div>
+            <div class="slide5">
+                <img id="slides1" src="srcn1.jpg">
+            </div>
+            <div class="slide6">
+                <img id="slides1" src="ingame.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer1">
+        
+        <strong>Copyright &copy; | Team From the Ground Up | WiCHacks 2020 </strong>
+        <br>Virtual Developer & Expert - Eleanor Post
+        <br>API Wizard - Hannah Chew
+        <br>Concept & Content Creator - Isabella Totino
+        <br>Illustration, Design, Web Dev - Nuzhat Minhaz
+        <br> Button Credit: Emma Chew | https://badger.studio
+        <br> Name Credit: Margaret Post 
+    </div>
+
+
+
+
+</div>
+
+
+</body>
+</html>
